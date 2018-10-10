@@ -1,9 +1,13 @@
-import time
-import pandas as pd
+import time #importing time library
+import pandas as pd #importing pandas library
 
+"""
+Assigning CSV data to variables in CITY_DATA dictionary 
+"""
 CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
+
 
 def get_filters():
     """
@@ -26,6 +30,7 @@ def get_filters():
         city = 'new york city'
     else:
         city = 'washington'
+        #adding case filter for exploring data
     choice = input('Do you wish to apply month/day filter. Enter month/day/both.Enter all for no filter : ').lower()
     if(choice == 'month'):
         print('Enter month for which you want to explore data')
@@ -152,7 +157,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
-
+  """Testing raw data"""
     print(df.sample(n=5))
 
 def main():
